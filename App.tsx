@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 import CartDrawer from './components/CartDrawer.tsx';
+import ChatBot from './components/ChatBot.tsx';
 import Home from './pages/Home.tsx';
 import ProductPage from './pages/ProductPage.tsx';
 import Admin from './pages/Admin.tsx';
@@ -36,6 +37,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
       <CartDrawer />
+      <ChatBot />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Product, CartItem, Order, Category, SkinQuizResult } from '../types.ts';
+import { Product, CartItem, Order, Category, SkinQuizResult, Review } from '../types.ts';
 import { INITIAL_PRODUCTS } from '../constants.ts';
 
 interface AppState {
@@ -21,6 +21,7 @@ interface AppState {
   setCartOpen: (open: boolean) => void;
   setQuizResult: (result: SkinQuizResult) => void;
   placeOrder: (order: Order) => void;
+  addReview: (productId: string, review: Review) => void;
 }
 
 export const useStore = create<AppState>()(
@@ -62,6 +63,13 @@ export const useStore = create<AppState>()(
       placeOrder: (order) => set((state) => ({ 
         orders: [order, ...state.orders],
         cart: [] 
+      })),
+      addReview: (productId, review) => set((state) => ({
+        products: state.products.map(p => 
+          p.id === productId 
+            ? { ...p, reviews: [review, ...(p.reviews || [])] } 
+            : p
+        )
       })),
     }),
     {

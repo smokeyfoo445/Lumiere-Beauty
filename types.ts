@@ -13,6 +13,15 @@ export interface BeforeAfterResult {
   caption?: string;
 }
 
+export interface Review {
+  id: string;
+  userName: string;
+  rating: number;
+  comment: string;
+  photoUrl?: string;
+  createdAt: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -30,6 +39,7 @@ export interface Product {
   routine: 'AM' | 'PM' | 'Both';
   ingredients?: string[];
   results?: BeforeAfterResult[];
+  reviews?: Review[];
 }
 
 export interface Variant {

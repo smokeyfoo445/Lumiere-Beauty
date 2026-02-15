@@ -28,6 +28,16 @@ export const INITIAL_PRODUCTS: Product[] = [
         after: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400&h=400',
         caption: 'Texture refinement and tone evening reported after 15 sessions.'
       }
+    ],
+    reviews: [
+      {
+        id: 'rev-1',
+        userName: 'Sasha K.',
+        rating: 5,
+        comment: 'Absolutely love this mask! It feels so high-end and my skin has never looked clearer.',
+        photoUrl: 'https://picsum.photos/seed/review1/400/400',
+        createdAt: new Date().toISOString()
+      }
     ]
   },
   {
@@ -44,7 +54,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     inventory: 120,
     isAiOptimized: true,
     benefits: ['Extends brush life', 'Prevents breakouts', 'Easy USB charging'],
-    routine: 'Both'
+    routine: 'Both',
+    reviews: []
   },
   {
     id: 'ali-3',
@@ -60,6 +71,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     inventory: 85,
     isAiOptimized: true,
     benefits: ['Space saving', 'Adjustable layers', 'Waterproof design'],
-    routine: 'Both'
+    routine: 'Both',
+    reviews: []
   }
 ];
