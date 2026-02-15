@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Lumière Beauty - Luxury Dropshipping",
+  "description": "A premium beauty e-commerce platform with AI-powered product descriptions, AliExpress integration, and advanced skincare routine builders.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
